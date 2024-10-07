@@ -3,8 +3,8 @@
 
 <div class="wrapper">
     <div class="container">
-        <a class="back-btn" href="index.php">Regresar</a>
-        <h1>Register</h1>
+        <a class="back-btn" href="index.php">Ir a Incio</a>
+        <h1>Registro</h1>
 
         <!-- Caso1: Exito al registrarse -->
         <?php if (isset($_SESSION['status_success'])): ?>

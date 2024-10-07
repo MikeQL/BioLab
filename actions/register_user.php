@@ -1,5 +1,6 @@
 <?php
 // si el boton fue pulsado
+
 if (isset($_POST['submit'])) {
 
     // nos conectamos a la base de datos mediante el connection.php
@@ -45,7 +46,9 @@ if (isset($_POST['submit'])) {
     // Si existen errores
     if (count($errors) > 0) {
         $_SESSION['errors'] = $errors;
-    } else {
+    } 
+    
+        else {
         // TODO: check if user already registered with same address
 
         // Busqueda SQL
@@ -78,7 +81,7 @@ if (isset($_POST['submit'])) {
 
         if ($success) $_SESSION['status_success'] = 'Usuario registrado correctamente :D';
         else $_SESSION['status_error'] = 'Ocurrió un error al registrar usuario, intente nuevamente D:';
-    }
+        }   
 }
 
 header("Location: ../register.php");
