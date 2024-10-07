@@ -106,18 +106,121 @@ body {
 }
 
 .dash-container {
-    width: 250px;
-    margin: 10px 25px;
-    padding: 15px;
+    width: 96%;
+    height: 96%;
+    margin: 2%;
     background: #fff;
     border-radius: 5px;
+}
+
+.dash-container a{
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
 }
 
 .boton-rojo {
     width: 100%;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 1.1em;
-    background: rgb(248, 81, 81);
-    
+    background: rgb(248, 81, 81);   
 }
+
+
+
+/* Aquí comienzan los estilos de la página dashboard para el home de sesión iniciada */
+
+:root{
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --white: #FFFFFF;
+    --black: #000000;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+
+.menu{
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding-top: 8px;
+}
+
+.logo{
+    width: 200px;
+}
+
+.navbar-iz ul,
+.navbar-der ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-iz {
+    display: flex;
+}
+
+.navbar-iz ul{
+    margin-left: 12px;
+}
+
+.navbar-iz ul li a,
+.navbar-der ul li a{
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+
+}
+
+.navbar-iz ul li a:hover,
+.navbar-der ul li a:hover{
+    border: 1px solid var(--hospital-green);
+    color: var(--hospital-green);
+}
+
+.nav-correo{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 20px;
+}
+
+.navbar-carrito {
+    position: relative;
+}
+
+@media (max-width: 950px) {
+    .menu{
+        display: block;
+    }
+    .navbar-iz ul {
+        display: none;
+    }
+
+    .nav-correo{
+        display: none;
+    }
+}
+
+/* Aquí terminan los estilos del dashboard */
