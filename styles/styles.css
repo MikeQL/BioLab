@@ -112,3 +112,12 @@ body {
     background: #fff;
     border-radius: 5px;
 }
+
+.boton-rojo {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    background: #ccc;
+    
+}
