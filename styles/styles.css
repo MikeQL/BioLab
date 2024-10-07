@@ -6,6 +6,12 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+h3 {
+    font-size: medium;
+    color: var(--hospital-green);
+    padding-left: 8px;
+}
+
 .wrapper {
     height: 100%;
     display: flex;
@@ -123,13 +129,8 @@ body {
     color: white;
 }
 
-.boton-rojo {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 50px;
-    font-size: 1.1em;
-    background: rgb(248, 81, 81);   
-}
+
+
 
 
 
@@ -149,13 +150,13 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
 }
 
 
-.menu{
+.menu-trigger{
     display: none;
     width: 50px;
     height: 50px;
@@ -165,6 +166,15 @@ body {
 .logo{
     width: 200px;
 }
+
+.navbar-iz {
+    display: flex;
+}
+
+.navbar-iz ul{
+    margin-left: 12px;
+}
+
 
 .navbar-iz ul,
 .navbar-der ul {
@@ -176,14 +186,6 @@ body {
     height: 60px;
 }
 
-.navbar-iz {
-    display: flex;
-}
-
-.navbar-iz ul{
-    margin-left: 12px;
-}
-
 .navbar-iz ul li a,
 .navbar-der ul li a{
     text-decoration: none;
@@ -191,13 +193,18 @@ body {
     border: 1px solid var(--white);
     padding: 8px;
     border-radius: 8px;
+    margin-left: 4px;
 
 }
 
-.navbar-iz ul li a:hover,
-.navbar-der ul li a:hover{
+.navbar-iz ul li a:hover{
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
+}
+
+.navbar-der ul li a:hover{
+    border: 1px solid red;
+    color: red;
 }
 
 .nav-correo{
@@ -211,7 +218,7 @@ body {
 }
 
 @media (max-width: 950px) {
-    .menu{
+    .menu-trigger{
         display: block;
     }
     .navbar-iz ul {
@@ -224,3 +231,148 @@ body {
 }
 
 /* Aquí terminan los estilos del dashboard */
+
+
+
+
+
+
+/* Aqui empiezan los estilos para el menu desplegable */
+ /* Menú desplegable */
+.menu-desplegable {
+    width:fit-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    display: none; /* Oculto por defecto */
+    border-radius: 8px;
+    z-index: 1;
+    left: 2%;
+}
+
+/* Submenú cuando está visible */
+.menu-desplegable.active {
+    display: block;
+}
+
+.menu-desplegable li {
+    
+    list-style-type: none;
+    
+}
+
+.menu-desplegable li a {
+    
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-desplegable li a:hover {
+    background-color: #111;
+    border-radius: 8px;
+}
+
+.menu-trigger {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+/* Aquí terminan los estilos del menu desplegable */
+
+
+
+
+
+/* Aquí empiezan los estilos para el menu desplegable del navbar */
+.menu-lab1 {
+    width:fit-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    display: none; /* Oculto por defecto */
+    border-radius: 8px;
+    z-index: 10;
+    left: 19%;
+    top: 14%;
+}
+/* Submenú cuando está visible */
+.menu-lab1.active {
+    display: block;
+}
+
+.menu-lab1 li {
+    
+    list-style-type: none;
+    
+}
+
+.menu-lab1 li a {
+    
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-lab1 li a:hover {
+    background-color: #111;
+    border-radius: 8px;
+}
+
+.lab1-trigger {
+    cursor: pointer;
+}
+
+
+
+
+
+.menu-lab2 {
+    width:fit-content;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: absolute;
+    display: none; /* Oculto por defecto */
+    border-radius: 8px;
+    z-index: 10;
+    left: 30%;
+    top: 14%;
+}
+/* Submenú cuando está visible */
+.menu-lab2.active {
+    display: block;
+}
+
+.menu-lab2 li {
+    
+    list-style-type: none;
+    
+}
+
+.menu-lab2 li a {
+    
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-lab2 li a:hover {
+    background-color: #111;
+    border-radius: 8px;
+}
+
+.lab2-trigger {
+    cursor: pointer;
+}
+/* Aquí terminan los estilos para el menu del navbar */
+
+
