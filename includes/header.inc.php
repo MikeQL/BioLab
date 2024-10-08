@@ -19,6 +19,7 @@ if (!isset($_SESSION)) {
      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
      <!-- estilos -->
      <link rel="stylesheet" href="styles/styles.css">
+     <link rel="stylesheet" href="styles/styleslabv.css">
 
 </head>
 <body>

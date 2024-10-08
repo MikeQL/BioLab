@@ -1,16 +1,15 @@
 <?php require_once 'includes/header.inc.php'; ?>
 <?php require_once 'includes/redirect_to_home.inc.php'; ?>
 
-
-<div class="dash-container">
+<div class="labv-e-container">
     <!-- Si existe la sesión de usuario -->
-    <?php if ($_SESSION['user']): ?>  
-        
-        <!-- Aquí empieza la programación de la pagina web para reservar equipos y materiales -->
+    <?php if ($_SESSION['user']): ?> 
+
+        <!-- Aquí empieza la programación de la pag de lab Vegetal -->
 
         <nav class="navbar">
             <!-- Imagen que activa el menú desplegable -->
-            <img src="./img/menu-icono.png" alt="menu" class="menu-trigger">
+            <img  src="./img/menu-icono.png" alt="menu" class="menu-trigger">
 
             <!-- Menú desplegable -->
             <ul class="menu-desplegable">
@@ -27,7 +26,7 @@
             </ul>
 
             <ul class="menu-lab1">
-                <li><a href="./labv-e.php">Equipos</a></li>
+                <li><a href="labv-e.php">Equipos</a></li>
                 <li><a href="/">Materiales</a></li>
                 <li><a href="/">Insumos</a></li>
             </ul>
@@ -39,7 +38,9 @@
             </ul>
 
             <div class="navbar-iz">
-                <img src="https://biotecnologia.utn.edu.ec/wp-content/uploads/2019/01/cropped-biotecnologia.png" alt="logo" class="logo">
+                <a href="dashboard.php" id="logo-container">
+                    <img  src="https://biotecnologia.utn.edu.ec/wp-content/uploads/2019/01/cropped-biotecnologia.png" alt="logo" class="logo">
+                </a>
 
                 <ul class="menu-navbar">
                     <!-- Lab 1 -->
@@ -61,53 +62,13 @@
             
         </nav>
 
-        <h2 style="padding-left: 1%; margin:12px 0 0 0;">Hola, <?= $_SESSION['user']['first_name'] ?></h2>
-
-        <div class="introduction">
-            <p class="int-txt">
-            Bienvenido a la plataforma virtual del laboratorio de la carrera de Ingeniería en Biotecnología de la Universidad Técnica del Norte. <br>
-
-            Nos complace darles la bienvenida a esta plataforma diseñada específicamente para apoyar su formación académica y profesional. El propósito de esta página es proporcionarles una herramienta eficiente para llevar un mejor control y gestión del uso de los equipos, materiales e insumos del laboratorio. Sabemos que la correcta utilización y seguimiento de estos recursos es fundamental para garantizar la calidad de sus prácticas, así como la seguridad de todos los usuarios.
-
-            A través de esta plataforma, podrán consultar en tiempo real la disponibilidad de los recursos del laboratorio y registrar sus actividades y solicitudes. Además, se crea un historial detallado del uso de cada equipo y material, facilitando así el monitoreo y control. Este registro también será de gran utilidad en caso de que ocurra algún inconveniente o se necesite revisar información pasada, permitiendo un seguimiento transparente y eficiente.
-
-            Esperamos que este sistema contribuya a un entorno de aprendizaje más organizado y seguro, ayudándoles a optimizar sus proyectos y a desarrollar una cultura de responsabilidad y profesionalismo en el uso de los recursos de laboratorio.
-
-            ¡Les deseamos muchos éxitos en sus prácticas y experimentos!
-            </p>
-
-        </div>
-
-        <div class="carrera">
-            <p>Nuestros Laboratorios</p>
-        </div>
-
-        <div class="card-container">
-            <!-- Card 1 -->
-            <div class="card">
-                <img src="https://biotecnologia.utn.edu.ec/wp-content/uploads/2016/07/Area-cultivo-in-vitro-327x270.jpg" alt="Laboratorio Biotecnología Vegetal">
-                <h2>Laboratorio de Biotecnología Vegetal</h2>
-                <p>El laboratorio de Biotecnología Vegetal desarrolla proyectos de Investigación orientados tanto a la introducción de especies vegetales promisorias, como la expresión de metabolitos secundarios con potencial comercial en áreas de la salud, el ambiente y la nutrición.
-                   El laboratorio también desarrolla investigaciones al descubrimiento, caracterización integral y aprovechamiento de organismos fotosintéticos como las microalgas.
-                   El laboratorio cuenta con áreas de Biologia Molecular, Cultivo in vitro de Tejidos Vegetales, Área de climatización, Área de microscopia y preparación de corte de tejidos, Áreas comunes de siembra, esterilización y docencia.</p>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="card">
-                <img src="https://biotecnologia.utn.edu.ec/wp-content/uploads/2016/07/Area-de-docencia-1-360x270.jpg" alt="Laboratorio Biotecnología Aplicada">
-                <h2>Laboratorio Biotecnología Aplicada</h2>
-                <p>Es un laboratorio nuevo que desarrolla investigaciones orientadas con la búsqueda del potencial biotecnológico de microorganismos o sus componentes.
-                    El laboratorio también se enfoca en el estudio de bioactividades a diferentes escalas a partir de extractos vegetales de plantas promisorias.
-                    El laboratorio cuenta con áreas de bioprocesos, cultivo celular, biología molecular, cepario de microorganismos, esterilización y docencia.</p>
-            </div>
-        </div>
-        
-        <!-- Aquí termina el código html para la página de inicio de sesión. -->
-
-           
 
 
-        <!-- Aquí van los javascript para las funcionalidades de la pagina -->
+
+
+
+
+         <!-- Aquí van los javascript para las funcionalidades de la pagina -->
         <!-- MENÚ DESPLEGABLE DE LA IMAGEN "MENU-TRIGGER" -->
         <script>
             // Seleccionar la imagen y el menú desplegable
@@ -131,6 +92,10 @@
 
 
 
+
+
+
+            <!-- java para el menú desplegable -->
         <script>
             //LAB 1 SUBMENU
             const lab1trigger = document.querySelector('.lab1-trigger');
@@ -186,7 +151,15 @@
                 }
             });
         </script>
-    <?php endif; ?>
+
+
+    <?php endif; ?> 
+
 </div>
+
+
+
+
+
 
 <?php require_once 'includes/footer.inc.php' ?>

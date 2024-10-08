@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Imagen</title>
+    <style>
+        /* Estilos básicos para el menú */
+        .menu-desplegable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Estilos para el menú desplegable */
+        .sub-desplegable {
+            display: none; /* Oculta el submenú por defecto */
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .sub-desplegable li {
+            list-style-type: none;
+        }
+
+        .sub-desplegable li a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sub-desplegable li a:hover {
+            background-color: #111;
+        }
+
+        /* Imagen como disparador del menú */
+        .menu-trigger {
+            cursor: pointer;
+            width: 40px; /* Ajusta el tamaño de la imagen */
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen que activa el menú desplegable -->
+    <img src="https://via.placeholder.com/40" alt="Menu" class="menu-trigger">
+
+    <!-- Menú desplegable -->
+    <ul class="menu-desplegable">
+        <ul class="sub-desplegable">
+            <li><a href="#web">Desarrollo Web</a></li>
+            <li><a href="#seo">SEO</a></li>
+            <li><a href="#marketing">Marketing Digital</a></li>
+        </ul>
+    </ul>
+
+    <script>
+        // Seleccionar la imagen y el menú desplegable
+        const trigger = document.querySelector('.menu-trigger');
+        const submenu = document.querySelector('.sub-desplegable');
+
+        // Alternar el menú al hacer clic en la imagen
+        trigger.addEventListener('click', () => {
+            // Alternar visibilidad del submenú
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        });
+
+        // Opción adicional para cerrar el menú si haces clic fuera de él
+        document.addEventListener('click', (event) => {
+            // Si el clic no es en la imagen o el menú, se oculta el menú
+            if (!trigger.contains(event.target) && !submenu.contains(event.target)) {
+                submenu.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
